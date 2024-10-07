@@ -52,4 +52,4 @@ if __name__ == "__main__":
             # break
         # break
 
-    torch.save(model.state_dict(), "./trained_models/ddpm_mse_epochs_100_D4.pth")
+    torch.save(model.state_dict(), "./ddpm_mse_epochs_100_D4.pth")
