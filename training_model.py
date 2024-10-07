@@ -28,7 +28,7 @@ if __name__ == "__main__":
     BATCH_SIZE = 128
     epochs = 100
 
-    train_dataset = pedCls_Dataset(ds_name_list=['D1'], txt_name='augmentation_train.txt', img_size=64, get_num=None)
+    train_dataset = pedCls_Dataset(ds_name_list=['D4'], txt_name='augmentation_train.txt', img_size=64, get_num=None)
     train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
