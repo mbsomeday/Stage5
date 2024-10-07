@@ -25,7 +25,7 @@ def get_loss(model, x_0, t, device):
 if __name__ == "__main__":
     model = SimpleUnet()
     T = 300     # 预定义的步数，也就是加多少步噪音
-    BATCH_SIZE = 128
+    BATCH_SIZE = 32
     epochs = 100
 
     train_dataset = pedCls_Dataset(ds_name_list=['D4'], txt_name='augmentation_train.txt', img_size=64, get_num=None)
