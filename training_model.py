@@ -37,7 +37,6 @@ if __name__ == "__main__":
     optimizer = Adam(model.parameters(), lr=0.001)
 
     for epoch in range(epochs):
-        print('start epoch', epoch)
         # for batch_idx, images in enumerate(train_loader):
         for batch_idx, (batch, _) in enumerate(train_loader):
 
@@ -47,7 +46,7 @@ if __name__ == "__main__":
             loss.backward()
             optimizer.step()
 
-            if batch_idx % 5 == 0:
+            if batch_idx % 50 == 0:
                 print(f"Epoch {epoch} | Batch index {batch_idx:03d} Loss: {loss.item()}")
 
             # break
