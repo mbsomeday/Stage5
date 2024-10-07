@@ -26,10 +26,10 @@ if __name__ == "__main__":
     model = SimpleUnet()
     T = 300     # 预定义的步数，也就是加多少步噪音
     BATCH_SIZE = 32
-    epochs = 100
+    epochs = 5
 
     train_dataset = pedCls_Dataset(ds_name_list=['D4'], txt_name='augmentation_train.txt', img_size=64, get_num=None)
-    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE)
+    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, drop_last=True)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     logging.info(f"Using device: {device}")
