@@ -48,7 +48,7 @@ if __name__ == "__main__":
             optimizer.step()
 
             if batch_idx % 5 == 0:
-                logging.info(f"Epoch {epoch} | Batch index {batch_idx:03d} Loss: {loss.item()}")
+                print(f"Epoch {epoch} | Batch index {batch_idx:03d} Loss: {loss.item()}")
 
             # break
         # break
