@@ -26,7 +26,7 @@ if __name__ == "__main__":
     model = SimpleUnet()
     T = 300     # 预定义的步数，也就是加多少步噪音
     BATCH_SIZE = 32
-    epochs = 5
+    epochs = 2
 
     train_dataset = pedCls_Dataset(ds_name_list=['D4'], txt_name='augmentation_train.txt', img_size=64, get_num=None)
     train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, drop_last=True)
