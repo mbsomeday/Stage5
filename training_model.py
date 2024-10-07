@@ -37,6 +37,7 @@ if __name__ == "__main__":
     optimizer = Adam(model.parameters(), lr=0.001)
 
     for epoch in range(epochs):
+        print('start epoch', epoch)
         # for batch_idx, images in enumerate(train_loader):
         for batch_idx, (batch, _) in enumerate(train_loader):
 
